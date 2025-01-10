@@ -3,7 +3,7 @@
 int main (int argc, char *argv[]) {
 
     char texto[100];
-    int palabras = 0, min = 100, max = 0, num = 0, caracteres = 0, NC = 0;
+    int palabras = 0, min = 100, max = 0, num = 0, caracteres = 0, NC;
 
     printf ("Ingrese una frase: " );
     fflush (stdin);
@@ -18,10 +18,12 @@ int main (int argc, char *argv[]) {
     {
         printf ("La frase no es valida. \n");
         return 0; 
-    }
+    } 
+
+    NC = caracteres;
 
     for (int i = 0; i < caracteres; i++){
-        if (texto[i] == ' ' || texto[i] == '\0' || texto[i] == '\n' ){
+        if ( texto[i] == ' ' || texto[i] == '\0' || texto[i] == '\n' ){
             if (num > 0){
                 palabras = palabras + 1; 
                 if (num > max){
@@ -33,8 +35,8 @@ int main (int argc, char *argv[]) {
                 num = 0;  
             }
         }   else{
-                num = num + 1; 
-                NC = NC + 1;
+                num = num + 1;  
+            
         }
     }
     printf ("El numero de caracteres es: %d \n ", NC); 
