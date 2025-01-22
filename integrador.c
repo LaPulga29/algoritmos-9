@@ -67,7 +67,7 @@ int main (int argc, char *argv[]) {
             bCIEN = suelto / 100; 
             suelto = suelto - (bCIEN *100); 
 
-        }else if (suelto >= 50); 
+        }if (suelto >= 50) 
         {
             bCINCUENTA = suelto / 50; 
             suelto = suelto - (bCINCUENTA * 50);
@@ -77,7 +77,7 @@ int main (int argc, char *argv[]) {
             mDIEZ = suelto / 10; 
             suelto = suelto - (mDIEZ * 10); 
 
-        }else if (suelto >= 5); 
+        }if(suelto >= 5) 
         {
             mCINCO = suelto / 5; 
             suelto = suelto - (mCINCO * 5); 
@@ -88,7 +88,7 @@ int main (int argc, char *argv[]) {
             mDOS = suelto / 2; 
             suelto = suelto - (mDOS * 2); 
 
-        }else if (suelto >= 1); 
+        }if (suelto >= 1) 
         {
             mUNO = suelto; 
             suelto = suelto - mUNO; 
